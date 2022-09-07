@@ -1,0 +1,30 @@
+package ch_6;
+	
+public class Exercise6_18 {
+	
+	static boolean isNumber(String str) {
+			
+		for(int i=0; i<str.length(); i++) {
+			
+			if( (int)(str.charAt(i)) > 47 && (int)(str.charAt(i)) <58 ) {
+				//System.out.println((int)(str.charAt(i)));
+				System.out.println(i);
+				continue;
+				
+			} else {
+				// System.out.println("false");
+				return false;
+			}
+		}
+		return true;
+	}
+			
+	
+	public static void main(String[] args) {
+		
+		String str = "12s3"; // 48 ~ 57
+		System.out.println(str + "숫자입니까? " + isNumber(str));
+		
+	}
+	
+}
